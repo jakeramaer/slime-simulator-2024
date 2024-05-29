@@ -12,6 +12,13 @@ We simulate the behavior of slime molds, specifically Physarum polycephalum, usi
 
 Slime molds are fascinating single-celled organisms that can solve complex problems such as finding the shortest path in a maze or optimizing networks. The slime mold adapts its body plan in response to environmental stimuli like nutrient attractants, repellents, and hazards during its growth and foraging activities.
 
+## Features
+
+- Real-time simulation of slime mold behavior
+- Visual representation of particle trails and sensor areas
+- Adjustable parameters for sensitivity, decay rate, and more
+- Interactive controls for adding particles, resetting the simulation, and toggling views
+
 ## Inner Workings of Each Particle
 
 Each particle in the slime simulator represents an agent that mimics the behavior of a slime mold. The movement and interaction of these particles are influenced by several factors:
@@ -56,13 +63,6 @@ As particles move, they deposit a trail on the grid at their current position. T
 Over time, the trails on the grid decay at a rate determined by the `decay_rate` parameter. This decay ensures that the trails fade away, preventing the grid from becoming overly cluttered and allowing new trails to form.
 
 By adjusting these parameters and observing the behavior of the particles, you can explore the dynamic patterns and complex transport networks that emerge from the collective interactions of simple agents.
-
-## Features
-
-- Real-time simulation of slime mold behavior
-- Visual representation of particle trails and sensor areas
-- Adjustable parameters for sensitivity, decay rate, and more
-- Interactive controls for adding particles, resetting the simulation, and toggling views
 
 ## Installation
 
