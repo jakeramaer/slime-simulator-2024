@@ -36,15 +36,15 @@ python slime.py
 ```
 
 Controls
-Q: Toggle view of the sensory areas of particles
-W: Toggle view of the actual particles
-1: Add a single particle to the center of the simulation
-2: Add 100 particles to the center of the simulation
-R: Reset the simulation
-A: Double the decay rate
-Z: Halve the decay rate
-S: Double the sensitivity
-X: Halve the sensitivity
+- Q: Toggle view of the sensory areas of particles
+- W: Toggle view of the actual particles
+- 1: Add a single particle to the center of the simulation
+- 2: Add 100 particles to the center of the simulation
+- R: Reset the simulation
+- A: Double the decay rate
+- Z: Halve the decay rate
+- S: Double the sensitivity
+- X: Halve the sensitivity
 
 <p align="center">
     <img src="resources/balls.gif" width="500" />
@@ -54,15 +54,15 @@ X: Halve the sensitivity
 
 You can adjust the following parameters to customize the simulation:
 
-width: Width of the simulation grid
-height: Height of the simulation grid
-grid_size: Size of each grid cell
-show_dots: Boolean to toggle the display of particles
-show_sensors: Boolean to toggle the display of sensory areas
-radius: Initial radius for particle distribution
-n: Number of initial particles
-col: Color of particles
-decay_rate: Rate at which trails decay
-sensitivity: Sensitivity of particles to trails
-max_deposit: Maximum deposit amount for trails
-deposit_amount: Amount deposited by particles
+- width: Width of the simulation grid
+- height: Height of the simulation grid
+- grid_size: Size of each grid cell
+- show_dots: Boolean to toggle the display of particles
+- show_sensors: Boolean to toggle the display of sensory areas
+- radius: Initial radius for particle distribution
+- n: Number of initial particles
+- col: Color of particles
+- decay_rate: Rate at which trails decay
+- sensitivity: Sensitivity of particles to trails
+- max_deposit: Maximum deposit amount for trails
+- deposit_amount: Amount deposited by particles
