@@ -5,9 +5,8 @@ import math
 from pygame import key
 
 # TODO:
-# 1. pixel size
-# 2. modulo vs collision with wall?
-# 3. real time parameter input
+# 1. food?
+# 2. optimising for GPU
 
 # Parameters #####################################################################
 
@@ -27,10 +26,6 @@ dots = []
 grid = np.zeros([width, height])
 food = np.zeros([width, height])
 
-# for i in range(50, 60):
-#     for j in range(50, 60):
-#         food[i, j] = 1.0
-
 # Class definitions ##############################################################
 
 class dot:
@@ -41,7 +36,6 @@ class dot:
         self.vel = [math.cos(self.angle), math.sin(self.angle)]
         self.radius = 5
         self.col = col
-
         self.sensor_size = 2
         self.sensor_angle = 30
         self.sensor_distance = 3
@@ -126,7 +120,6 @@ def update(grid):
     np.maximum(np.zeros(grid.shape), grid - decay_rate, out=grid)
 
 def draw(grid, dots):
-    # max_value = np.amax(grid)
     if not show_dots:
         for i, j in np.ndindex(grid.shape):
             col = [grid[i, j] * (255 / max_deposit), 0, 0]
@@ -135,25 +128,10 @@ def draw(grid, dots):
             )
             pygame.draw.rect(screen, col, rect)
 
-            # if food[i, j] == 1:
-            #     pygame.draw.rect(screen, [255, 255, 255], rect)
-
-
-    # draw dots
-    # for dot in dots:
-    #     pygame.draw.circle(screen, [255,255,255], dot.pos, 2)
-
 def make_dot(dots, pos, amount):
     for i in range(amount):
         angle = np.random.uniform(0, 2 * math.pi)
-        # pos = [np.random.randint(0, width), np.random.randint(0, height)]
-        # pos = [
-        #     width/2 + math.cos(angle)*radius,
-        #     height/2 + math.sin(angle)*radius
-        # ]
-        # angle = (angle + math.pi) % (math.pi*2)
         pos = [int(width/2), int(height/2)]
-        # angle = np.random.uniform(0, 2 * math.pi)
         col = np.array([255,255,255])
         new_dot = dot(len(dots) + 1 + i, pos, angle, col)
         dots.append(new_dot)
@@ -175,7 +153,6 @@ while not crashed:
     dt = clock.tick(60) 
     time_elapsed += dt
     for event in pygame.event.get():
-        # print(event)
         if event.type == pygame.QUIT:
             crashed = True
         elif event.type == pygame.KEYDOWN:
