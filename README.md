@@ -91,10 +91,6 @@ python slime.py
 - S: Double the sensitivity
 - X: Halve the sensitivity
 
-<p align="center">
-    <img src="resources/balls.gif" width="500" />
-</p>
-
 ## Parameters
 
 You can adjust the following parameters to customize the simulation:
